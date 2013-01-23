@@ -1,0 +1,116 @@
+/*
+    Document   : newCascadeStyleSheet
+    Created on : 14-mag-2012, 16.29.40
+    Author     : antoniosala
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@font-face {
+    font-family: 'TitilliumText22LRegular';
+    src: url('fonts/titilliumtext22l003-webfont.eot');
+    src: url('fonts/titilliumtext22l003-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/titilliumtext22l003-webfont.woff') format('woff'),
+        url('fonts/titilliumtext22l003-webfont.ttf') format('truetype'),
+        url('fonts/titilliumtext22l003-webfont.svg#TitilliumText22LRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+    font-family: TitilliumText22LRegular, Verdana, sans-serif;
+    color: #666;
+	background:url('../img/sfondo.jpg') no-repeat top left;
+	background-size:100%
+}
+h1 {max-width:300px}
+.ui-body-c{
+    font-family: TitilliumText22LRegular, Verdana, sans-serif;
+    color: #666;
+}
+
+.ui-content{
+    padding:0;background:none
+}
+.ui-page {}
+
+#title-azienda{
+    width: 60%;
+    margin-left: 80px;
+}
+
+#title-sidebar{
+    margin-left: 30px;
+}
+
+.main-content{
+    padding: 40px;
+}
+.ui-footer {height: auto !important;
+
+min-height: 20px;
+
+overflow: hidden;width:50%;background:#333;opacity:0.8}
+
+.ui-btn{
+    max-width:100px;background:none;border:0;
+}
+.ui-btn-icon-top .ui-btn-inner{
+}
+
+.ui-icon {
+	background:none;
+    border-radius: 0;
+    height: 58px;
+    width: 68px;
+    margin-left: -34px;
+    margin-top: -5px;
+    border: none;
+}
+
+
+.ui-btn-icon-top .ui-btn-inner .ui-icon{
+    margin-left: -30px;
+}
+
+.ui-icon-shadow{
+    box-shadow: none;
+}
+
+
+.ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a{
+     /* font-family: TitilliumText22LRegular, Verdana, sans-serif; */
+}
+
+.ui-btn-active {
+/*    font-family: TitilliumText22LRegular, Verdana, sans-serif; */
+    border: 1px solid black;
+background: #444;
+font-weight: bold;
+color: white;
+text-shadow: 0 1px 1px #111;
+}
+
+.ui-btn-active .ui-icon{
+    background-position: bottom;
+}
+
+.close-dialog{
+    width: 48px;
+    height: 48px;
+    background: url('../img/close.png') no-repeat;
+    border: none;
+}
+
+#dialog-contattaci .ui-header .ui-title, #dialog-contattaci  .ui-header h1{
+    font-size: 1.7em;
+    min-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#dialog-contattaci .ui-btn {
+height: 35px;
+}
+

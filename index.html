@@ -1,0 +1,128 @@
+
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="apple-touch-icon" href="img/icona_app.png">					
+        <link rel="icon" href="img/icona_app.png" />
+        <link rel="shortcut icon" href="img/icona_app.png" />
+        <link rel="apple-touch-icon-precomposed" href="img/icona_app.png"/>
+		<link rel='apple-touch-startup-image' href='img/splash.png' />
+        <link rel='apple-touch-startup-image' href='img/splash_lowres.png' />
+        
+      
+        
+        <title>Protagonisti del Tempo</title> 
+        
+        <link rel="stylesheet" href="css/mobile.css" />
+<!--        <link rel="stylesheet" href="css/coverflow.css" />-->
+<link rel="stylesheet" href="css/imageflow.css" type="text/css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+        <script src="js/override.js"></script>
+        <script src="http://code.jquery.com/jquery-1.6.2.min.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+        <script src="js/protagonisti.js"></script>
+	
+</head> 
+	
+<body> 
+
+<!-- Start of first page: #home -->
+<div data-role="page" id="home">
+
+	<div data-role="header">
+    		<h1 style="font-size:20px;text-transform:uppercase">Protagonisti Del Tempo</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed">
+    	<div data-role="navbar">
+		<ul>
+			<li><a href="pdf/catalogo.pdf" id="catalogo_icon" data-icon="check" target="_blank"><img src="img/catalogo.png" alt="Catalogo" style="opacity:0.8;width:100%" /></a></li>
+			<li><a href="#info" data-rel="dialog" id="info_icon"><img src="img/info.png" alt="Invia" style="opacity:0.8;width:100%"/></a></li>
+			<li><a href="#invia" data-rel="dialog" id="invia_icon"><img src="img/invia.png" alt="Invia" style="opacity:0.8;width:100%"/></a></li>
+            <li><a href="#contatti" data-rel="dialog" id="contatti_icon"><img src="img/contatti.png" alt="Contatti" style="opacity:0.8;width:100%"/></a></li>
+		</ul>
+	</div><!-- /navbar -->
+		
+	</div><!-- /footer -->
+</div><!-- /page home -->
+
+
+
+<div data-role="page" id="info" >
+    <input type="button" data-role="none" value="" class="close-dialog" style="width:600px" />
+	<div data-role="content" style="width:600px;border:1px solid #aaa;color:#333;text-shadow:0 1px 0 #fff;background:#f9f9f9;background-image:-webkit-gradient(linear,left top,left bottom,from(#f9f9f9),to(#eee));background-image:-webkit-linear-gradient(#f9f9f9,#eee);background-image:-moz-linear-gradient(#f9f9f9,#eee);background-image:-ms-linear-gradient(#f9f9f9,#eee);background-image:-o-linear-gradient(#f9f9f9,#eee);background-image:linear-gradient(#f9f9f9,#eee)">	
+		<h2 style="clear:both">Info</h2>
+		<p style="float:left;width:330px">
+                   <iframe width="330" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=Via+Chiesa+Sud,+169,+Rovereto,+MO&amp;aq=0&amp;oq=via+chiesa+sud+169&amp;sll=44.435505,10.985057&amp;sspn=3.047627,1.691895&amp;ie=UTF8&amp;hq=&amp;hnear=Via+Chiesa+Sud,+169,+Rovereto,+Modena,+Emilia-Romagna&amp;ll=44.82178,10.950596&amp;spn=0.011826,0.014527&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                </p>
+                <p style="float:right;width:250px;margin-left:20px">
+                <strong>Protagonisti del Tempo</strong><br />
+                Via Chiesa Sud 169/n<br />
+                Rovereto S.S. (Mo)<br />
+                <a href="http://www.protagonistideltempo.it" target="_blank" title="Pdt Website">www.protagonistideltemo.it</a><br />
+                </p>		
+	</div><!-- /content -->
+	
+</div><!-- /page dialog-contattaci -->
+
+
+<!-- Start of third page: #dialog-contattaci -->
+<div data-role="page" id="contatti">
+    <input type="button" data-role="none" value="" class="close-dialog" />
+	<div data-role="content" style="border:1px solid #aaa;color:#333;text-shadow:0 1px 0 #fff;background:#f9f9f9;background-image:-webkit-gradient(linear,left top,left bottom,from(#f9f9f9),to(#eee));background-image:-webkit-linear-gradient(#f9f9f9,#eee);background-image:-moz-linear-gradient(#f9f9f9,#eee);background-image:-ms-linear-gradient(#f9f9f9,#eee);background-image:-o-linear-gradient(#f9f9f9,#eee);background-image:linear-gradient(#f9f9f9,#eee)">	
+		<h2>Contatta Protagonisti Del Tempo</h2>
+		<p>
+                    <label for="nome">Mittente:</label>
+                    <input type="text" name="nome" id="nome" value=""  />
+                    
+                    <label for="email">Email mittente:</label>
+                    <input type="text" name="email" id="email" value=""  />
+                    
+                    <label for="messaggio">Richiesta:</label>
+                    <textarea name="messaggio" id="messaggio">
+                    </textarea>
+                    <input type="submit" data-role="button" value="Invia" id="invia" />
+                    
+                </p>		
+	</div><!-- /content -->
+	
+</div><!-- /page dialog-contattaci -->
+
+
+<div data-role="page" id="invia">
+    <input type="button" data-role="none" value="" class="close-dialog" />
+	<div data-role="content" style="border:1px solid #aaa;color:#333;text-shadow:0 1px 0 #fff;background:#f9f9f9;background-image:-webkit-gradient(linear,left top,left bottom,from(#f9f9f9),to(#eee));background-image:-webkit-linear-gradient(#f9f9f9,#eee);background-image:-moz-linear-gradient(#f9f9f9,#eee);background-image:-ms-linear-gradient(#f9f9f9,#eee);background-image:-o-linear-gradient(#f9f9f9,#eee);background-image:linear-gradient(#f9f9f9,#eee)">	
+		<h2>Invia il catalogo</h2>
+		<p>
+        			<label for="nome">Nome mittente:</label>
+                    <input type="text" name="nome" id="nome" value=""  />
+                    
+                    <label for="nome">Email mittente:</label>
+                    <input type="text" name="nome" id="nome" value=""  />
+                    
+                    <label for="email">Email destinatario:</label>
+                    <input type="text" name="email" id="email" value=""  />
+                    
+                    <label for="messaggio">Note:</label>
+                    <textarea name="messaggio" id="messaggio">
+                    </textarea>
+                    
+                    <input type="submit" data-role="button" value="Invia" id="invia" />
+                    
+                </p>		
+	</div><!-- /content -->
+	
+</div><!-- /page dialog-contattaci -->
+
+</body>
+</html>
