@@ -22,12 +22,24 @@
 <!--        <link rel="stylesheet" href="css/coverflow.css" />-->
 <link rel="stylesheet" href="css/imageflow.css" type="text/css" />
         <link rel="stylesheet" href="css/style.css" />
-        <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.0.0.min.js"></script>
         <script src="js/override.js"></script>
-        <script src="http://code.jquery.com/jquery-1.6.2.min.js" type="text/javascript"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
         <script src="js/protagonisti.js"></script>
-	
+	        <script src="js/jhere.min.js"></script>
+            <script>
+            $(window).on('load', function() {
+				$('#mappa').jHERE({
+					enable: ['behavior'],
+					center: [44.821492, 10.950739],
+					zoom: 11,
+				});
+				$('#mappa').jHERE('marker', [44.821492, 10.950739], {text: '●', textColor: '#fff', fill: '#004C9A'
+				});
+});
+            </script>
+
 </head> 
 	
 <body> 
@@ -60,17 +72,19 @@
 
 <div data-role="page" id="info" >
     <input type="button" data-role="none" value="" class="close-dialog" style="width:600px" />
-	<div data-role="content" style="width:600px;border:1px solid #aaa;color:#333;text-shadow:0 1px 0 #fff;background:#f9f9f9;background-image:-webkit-gradient(linear,left top,left bottom,from(#f9f9f9),to(#eee));background-image:-webkit-linear-gradient(#f9f9f9,#eee);background-image:-moz-linear-gradient(#f9f9f9,#eee);background-image:-ms-linear-gradient(#f9f9f9,#eee);background-image:-o-linear-gradient(#f9f9f9,#eee);background-image:linear-gradient(#f9f9f9,#eee)">	
+	<div data-role="content" style="border:1px solid #aaa;color:#333;text-shadow:0 1px 0 #fff;background:#f9f9f9;background-image:-webkit-gradient(linear,left top,left bottom,from(#f9f9f9),to(#eee));background-image:-webkit-linear-gradient(#f9f9f9,#eee);background-image:-moz-linear-gradient(#f9f9f9,#eee);background-image:-ms-linear-gradient(#f9f9f9,#eee);background-image:-o-linear-gradient(#f9f9f9,#eee);background-image:linear-gradient(#f9f9f9,#eee)">	
 		<h2 style="clear:both">Info</h2>
-		<p style="float:left;width:330px">
-                   <iframe width="330" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=Via+Chiesa+Sud,+169,+Rovereto,+MO&amp;aq=0&amp;oq=via+chiesa+sud+169&amp;sll=44.435505,10.985057&amp;sspn=3.047627,1.691895&amp;ie=UTF8&amp;hq=&amp;hnear=Via+Chiesa+Sud,+169,+Rovereto,+Modena,+Emilia-Romagna&amp;ll=44.82178,10.950596&amp;spn=0.011826,0.014527&amp;t=m&amp;z=14&amp;output=embed"></iframe>
-                </p>
-                <p style="float:right;width:250px;margin-left:20px">
+		<div style="float:left;margin-right:20px">
+        			<div id="mappa" style="width:330px;height:350px"></div>
+                </div>
+                <div style="float:left">
+                <p>
                 <strong>Protagonisti del Tempo</strong><br />
                 Via Chiesa Sud 169/n<br />
                 Rovereto S.S. (Mo)<br />
                 <a href="http://www.protagonistideltempo.it" target="_blank" title="Pdt Website">www.protagonistideltemo.it</a><br />
-                </p>		
+                </p>
+                </div>		
 	</div><!-- /content -->
 	
 </div><!-- /page dialog-contattaci -->
